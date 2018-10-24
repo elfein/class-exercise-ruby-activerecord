@@ -1,2 +1,9 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<%= link_to "All Movies", movies_path %>
+<h1><%= @movie.title %></h1>
+
+<h4 style="display: inline">Genre:</h4><span> <%= @movie.genre %></span>
+<h4 style="display: inline">Year:</h4><span> <%= @movie.year %></span>
+<h5 style="display: inline">Synopsis:</h4><span> <%= @movie.synopsis %></span>
+<div><img width="400" src=<%= @movie.picture %> alt='movie-img'></div>
+
+<p><%= link_to "Edit", edit_movie_path %> | <%= link_to "Delete", movie_path(@movie), method: :delete %></p>

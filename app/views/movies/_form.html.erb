@@ -1,0 +1,25 @@
+<%= form_for @movie do |f| %>
+    <div>
+      <%= f.text_field :title, placeholder: "Title", autofocus: true %>
+    </div>
+
+    <div>
+      <%= f.text_field :genre, placeholder: "Genre" %>
+    </div>
+
+    <div>
+      <%= f.number_field :year, placeholder: "Year" %>
+    </div>
+
+    <div>
+      <%= f.text_field :synopsis, placeholder: "Synopsis" %>
+    </div>
+
+    <div>
+      <%= f.text_field :picture, placeholder: "Image Address" %>
+    </div>
+
+    <div>
+      <%= f.submit "Save Movie" %>
+    </div>
+<% end %>
